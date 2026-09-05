@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Olong Crystal Eve | AI Creative</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#070707;
+    color:#fff;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(7,7,7,.85);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.logo span{
+    opacity:.5;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+nav a:hover{
+    opacity:.5;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: block;
+}
+
+nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 8% 70px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle,rgba(255,255,255,.13),transparent 65%);
+    top:-150px;
+    right:-100px;
+}
+
+.hero-content{
+    max-width:800px;
+    position:relative;
+    z-index:2;
+}
+
+.small-title{
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:12px;
+    opacity:.6;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(45px,8vw,90px);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+h1 span{
+    opacity:.45;
+}
+
+.hero p{
+    max-width:650px;
+    font-size:18px;
+    opacity:.7;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 25px;
+    border:1px solid rgba(255,255,255,.3);
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+.btn:hover{
+    background:white;
+    color:black;
+}
+
+.btn.primary{
+    background:white;
+    color:black;
+}
+
+/* GENERAL */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    opacity:.5;
+    margin-bottom:50px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.about-text{
+    font-size:18px;
+    opacity:.75;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.info-box{
+    border:1px solid rgba(255,255,255,.1);
+    padding:25px;
+    background:#0d0d0d;
+}
+
+.info-box h3{
+    margin-bottom:8px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service{
+    padding:30px;
+    min-height:230px;
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.1);
+    transition:.4s;
+}
+
+.service:hover{
+    transform:translateY(-8px);
+    border-color:rgba(255,255,255,.35);
+}
+
+.service-number{
+    font-size:13px;
+    opacity:.4;
+    margin-bottom:30px;
+}
+
+.service h3{
+    margin-bottom:15px;
+}
+
+.service p{
+    opacity:.55;
+}
+
+/* PROJECTS */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.project{
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.1);
+    overflow:hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.project-image{
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+    linear-gradient(135deg,#171717,#050505);
+    font-size:45px;
+    opacity:.8;
+}
+
+.project-info{
+    padding:25px;
+}
+
+.project-info h3{
+    margin-bottom:8px;
+}
+
+.project-info p{
+    opacity:.5;
+    font-size:14px;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    border:1px solid rgba(255,255,255,.2);
+    padding:12px 18px;
+    font-size:14px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.contact p{
+    opacity:.6;
+    margin:20px auto 30px;
+}
+
+.contact-details{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.contact-details a{
+    color:white;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.2);
+    padding:12px 20px;
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 15px;
+}
+
+.project-tags span {
+    padding: 6px 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid rgba(255,255,255,.08);
+    opacity:.5;
+    font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .projects{
+        grid-template-columns:repeat(2,1fr);
+}
+@media (max-width: 768px) {
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        display:flex;
+        width: fit-content;
+        margin: 10px auto;
+    }
+
+@media(max-width:700px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    nav ul{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+    width:auto;
+    margin-left:auto;
+}
+
+nav a{
+    font-size:11px;
+    padding:5px 6px;
+}
+
+    .hero{
+        padding:120px 6% 70px;
+    }
+
+    section{
+        padding:75px 6%;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:50px;
+    }
+    /* PROJECT IMAGE */
+
+.project-image{
+  width:100%;
+    height:300px;
+    overflow:hidden;
+    background:#111;
+}
+
+.project-image img,
+.project-image video {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+    transition:transform .5s ease;
+}
+
+/* IMAGE ZOOM */
+
+.project:hover .project-image img{
+    transform:scale(1.05);
+}
+
+
+/* AUDIO PLAYER */
+
+.audio-player{
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.audio-label{
+    display:block;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    opacity:.6;
+    margin-bottom:10px;
+}
+
+.audio-player audio{
+    width:100%;
+    height:38px;
+}
+.project-image img,
+.project-image video {
+    transition: transform 0.4s ease;
+}
+
+.project:hover .project-image img,
+.project:hover .project-image video {
+    transform: scale(1.03);
+}
+.download-cv {
+    border: 1px solid rgba(255,255,255,0.3);
+}
+html {
+    scroll-behavior: smooth;
+}
+/* HERO UPGRADE */
+
+.small-title{
+    font-size:12px;
+    letter-spacing:3px;
+    opacity:.6;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:64px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    display:block;
+    opacity:.55;
+}
+
+.hero p{
+    max-width:600px;
+    font-size:17px;
+    opacity:.7;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.btn.primary{
+    background:#fff;
+    color:#000;
+    border:1px solid #fff;
+}
+
+.btn.primary:hover{
+    transform:translateY(-3px);
+    opacity:.85;
+}
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:flex-start;
+
+}
+/* PROJECT CARD UPGRADE */
+
+.project{
+    border-radius:14px;
+    position:relative;
+}
+
+.project-info{
+    padding:22px;
+}
+
+.project-info h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.project-info p{
+    font-size:14px;
+    line-height:1.7;
+    opacity:.65;
+}
+
+.project-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:12px 0 15px;
+}
+
+.project-tags span{
+    padding:5px 9px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    font-size:9px;
+    letter-spacing:1px;
+    opacity:.7;
+}
+
+.project-link{
+    display:inline-block;
+    margin-top:18px;
+    color:#fff;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:1px;
+    border-bottom:1px solid rgba(255,255,255,.4);
+    padding-bottom:4px;
+    transition:.3s;
+}
+
+.project-link:hover{
+    opacity:.5;
+    transform:translateX(4px);
+}
+/* ABOUT SECTION UPGRADE */
+
+.about-text{
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:14px;
+}
+
+.about-text p{
+    font-size:15px;
+    line-height:1.8;
+    opacity:.75;
+}
+
+.info{
+    gap:15px;
+}
+
+.info-box{
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.08);
+    padding:22px;
+    border-radius:14px;
+    transition:.3s ease;
+}
+
+.info-box:hover{
+    transform:translateY(-5px);
+    border-color:rgba(255,255,255,.25);
+}
+
+.info-box h3{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:7px;
+    opacity:.6;
+}
+
+.info-box p{
+    font-size:15px;
+}
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+    margin-top:40px;
+}
+
+.service{
+    padding:30px 25px;
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.1);
+    transition:.3s ease;
+}
+
+.service:hover{
+    transform:translateY(-8px);
+    border-color:rgba(255,255,255,.3);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+.service-number{
+    font-size:12px;
+    letter-spacing:2px;
+    opacity:.4;
+    margin-bottom:25px;
+}
+
+.service h3{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.service p{
+    font-size:14px;
+    opacity:.6;
+    line-height:1.7;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .services{
+        grid-template-columns:1fr;
+    }
+    /* =========================
+   SERVICES UPGRADE
+========================= */
+
+.service{
+    position:relative;
+    padding:30px;
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    overflow:hidden;
+    transition:transform .3s ease,
+               border-color .3s ease,
+               box-shadow .3s ease;
+}
+
+.service:hover{
+    transform:translateY(-8px);
+    border-color:rgba(255,255,255,.25);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.service h3{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.service p{
+    font-size:14px;
+    line-height:1.7;
+    opacity:.65;
+}
+
+.service-icon{
+    font-size:32px;
+    margin-bottom:20px;
+    display:block;
+}
+
+@media(max-width:700px){
+
+    .service{
+        padding:25px;
+    }
+
+    .service h3{
+        font-size:18px;
+    }
+    /* =========================
+   SKILLS UPGRADE
+========================= */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:30px;
+}
+
+.skill{
+    padding:12px 18px;
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:30px;
+    font-size:13px;
+    letter-spacing:.5px;
+    transition:.3s ease;
+}
+
+.skill:hover{
+    transform:translateY(-4px);
+    border-color:rgba(255,255,255,.4);
+    background:#151515;
+}
+
+@media(max-width:700px){
+
+    .skills{
+        gap:8px;
+    }
+
+    .skill{
+        padding:10px 14px;
+        font-size:12px;
+    }
+    /* =========================
+   CONTACT UPGRADE
+========================= */
+
+.contact-box{
+    max-width:750px;
+    margin:40px auto 0;
+    padding:40px;
+    text-align:center;
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:16px;
+}
+
+.contact-box h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.contact-box p{
+    font-size:15px;
+    opacity:.65;
+    margin-bottom:25px;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.contact-buttons .btn{
+    margin:0;
+}
+
+@media(max-width:700px){
+
+    .contact-box{
+        padding:28px 20px;
+    }
+
+    .contact-box h3{
+        font-size:23px;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+    }
+
+    .contact-buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+    /* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:40px 8%;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    margin-top:80px;
+}
+
+footer p{
+    font-size:13px;
+    opacity:.5;
+}
+
+footer strong{
+    opacity:1;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  
+<div class="logo">
+OLONG <span>CRYSTAL EVE</span>
+</div>
+<ul>
+  <li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="hero-content">
+
+<div class="small-title">
+  AI CREATIVE & DIGITAL SPECIALIST
+  </div>
+  <h1>I CREATE
+<span>WHAT YOU IMAGINE.</span>
+</h1>
+
+<p>
+    I create AI-powered videos, websites, digital content and
+    automation solutions that help ideas stand out.
+</p>
+<div class="buttons">
+<a href="#projects" class="btn">View My Work</a>
+<a href="CV.pdf" class="btn" download>
+    Download My CV
+</a>
+
+<a href="#contact" class="btn">
+Let's Work Together
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-title">
+        About Me
+    </div>
+
+    <div class="section-subtitle">
+        Creative mind. AI enthusiast. Digital creator.
+    </div>
+
+    <div class="about">
+
+        <div class="about-text">
+
+            <p>
+                I am Olong Crystal Eve, a creative AI enthusiast
+                and digital creator based in Benin City, Nigeria.
+                I use artificial intelligence and modern digital
+                tools to turn ideas into engaging digital experiences.
+            </p>
+
+            <br>
+
+            <p>
+                My work combines storytelling, visual creativity,
+                technology and AI to create content that captures
+                attention, communicates ideas and helps businesses
+                present themselves effectively online.
+            </p>
+
+            <br>
+
+            <p>
+                From AI-powered videos and websites to voice agents
+                and digital content, I am constantly exploring new
+                ways to use technology creatively.
+            </p>
+
+        </div>
+
+        <div class="info">
+
+            <div class="info-box">
+                <h3>Location</h3>
+                <p>Benin City, Nigeria</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Focus</h3>
+                <p>AI & Digital Creativity</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Education</h3>
+                <p>WAEC & NECO</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Availability</h3>
+                <p>Open to Opportunities</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="section-title">
+What I Do
+</div>
+
+<div class="section-subtitle">
+Digital solutions powered by creativity and AI.
+</div>
+
+<div class="service">
+<span class="service-icon">📱</span>
+<h3>AI Video Creation</h3>
+<p>
+Creating cinematic AI-generated videos,
+storytelling content and visual concepts.
+</p>
+</div>
+
+<div class="service">
+<span class="service-icon">🎬</span>
+<h3>AI Video Editing</h3>
+<p>
+Editing short-form videos, advertisements,
+social media content and creative projects.
+</p>
+</div>
+
+<div class="service">
+<span class="service-icon">🤖</span>
+<h3>AI Voice Agents</h3>
+<p>
+Designing conversational AI agents for
+businesses and customer communication.
+</p>
+</div>
+
+<div class="service">
+<span class="service-icon">🌐</span>
+<h3>Web Design</h3>
+<p>
+Creating clean, responsive websites using
+HTML, CSS and JavaScript.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="section-title">
+        Featured Projects
+    </div>
+
+    <div class="section-subtitle">
+        A selection of my creative and technology projects.
+    </div>
+
+    <div class="projects">
+
+        <!-- PROJECT 1 -->
+        <div class="project">
+
+            <div class="project-image">
+                <video controls>
+                    <source src="Videos/advert.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+
+            <div class="project-info">
+                <h3>The Future of Business</h3>
+<div class="project-tags">
+    <span>AI VIDEO</span>
+    <span>ADVERTISING</span>
+    <span>EDITING</span>
+</div>
+                <p>
+                    A cinematic AI advertisement created to demonstrate
+                    AI video generation, storytelling and editing.
+                </p>
+                <a href="Videos/advert.mp4"
+   class="project-link"
+   target="_blank">
+    WATCH PROJECT →
+</a>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+        <div class="project">
+
+            <div class="project-image">
+                <video controls>
+                    <source src="Videos/cinematic.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+
+            <div class="project-info">
+                <h3>One More Chance</h3>
+<div class="project-tags">
+    <span>AI FILM</span>
+    <span>STORYTELLING</span>
+    <span>EDITING</span>
+</div>
+                <p>
+                    A cinematic AI short film created to demonstrate
+                    storytelling, visual consistency and AI video editing.
+                </p>
+                <a href="Videos/cinematic.mp4"
+   class="project-link"
+   target="_blank">
+    WATCH PROJECT →
+</a>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+        <div class="project">
+
+            <div class="project-image">
+                <img src="Image/website.jpg"
+                     alt="AI Business Website">
+            </div>
+
+            <div class="project-info">
+
+                <h3>Business Website</h3>
+<div class="project-tags">
+    <span>WEB DESIGN</span>
+    <span>HTML</span>
+    <span>CSS</span>
+</div>
+                <p>
+                    A responsive website concept created
+                    for a modern business.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
+        <div class="project">
+
+            <div class="project-image">
+                <img src="Image/media-content.jpg"
+                     alt="AI media content">
+            </div>
+
+            <div class="project-info">
+
+                <h3>Social Media Content</h3>
+<div class="project-tags">
+    <span>SOCIAL MEDIA</span>
+    <span>AI CONTENT</span>
+    <span>SHORT FORM</span>
+</div>
+                <p>
+                    Short-form content designed for TikTok,
+                    Instagram and Facebook.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+        <div class="project">
+
+            <div class="project-image">
+                <img src="Image/comic.png"
+                     alt="AI Video Project">
+            </div>
+
+            <div class="project-info">
+
+                <h3>AI Creative Experiment</h3>
+<div class="project-tags">
+    <span>AI ART</span>
+    <span>CREATIVE</span>
+    <span>VISUALS</span>
+</div>
+                <p>
+                    Experimental AI visuals exploring new
+                    ways of digital storytelling.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- AUDIO PROJECT -->
+        <div class="project">
+
+            <div class="project-info">
+
+                <h3>Your Business Never Sleeps</h3>
+
+                <p>
+                    A short-form AI agent project demonstrating
+                    how smoothly business conversations can flow with AI.
+                </p>
+
+                <div class="audio-player">
+
+                    <span class="audio-label">
+                        🎧 Audio Preview
+                    </span>
+
+                    <audio controls>
+                        <source src="Audio/agent.mp3"
+                                type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="section-title">
+Skills & Tools
+</div>
+
+<div class="section-subtitle">
+Technologies and creative skills I work with.
+</div>
+
+<div class="skills">
+
+    <div class="skill">AI Video Editing</div>
+    <div class="skill">AI Content Creation</div>
+    <div class="skill">Website Design</div>
+    <div class="skill">HTML & CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">AI Voice Agents</div>
+    <div class="skill">Business Automation</div>
+    <div class="skill">Social Media Content</div>
+    <div class="skill">Cinematic Storytelling</div>
+
+</div>
+<br>
+
+<div class="skill">CapCut</div>
+<div class="skill">ChatGPT</div>
+<div class="skill">Grok AI</div>
+<div class="skill">Lovable</div>
+<div class="skill">Canva</div>
+<div class="skill">Acode</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="section-title">
+        Let's Work Together
+    </div>
+
+    <div class="section-subtitle">
+        Have a project in mind? Let's turn your idea into something amazing.
+    </div>
+
+    <div class="contact-box">
+
+        <h3>Ready to Start a Project?</h3>
+
+        <p>
+            I'm available for AI video editing, website design,
+            AI voice agents and creative digital projects.
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="https://wa.me/2347050599971" class="btn primary">
+                WhatsApp Me
+            </a>
+
+            <a href="mailto:ceostarr2@gmail.com" class="btn">
+                Send Me an Email
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>OLONG CRYSTAL EVE</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        AI Creative & Digital Specialist
+    </p>
+
+</footer>
+
+
+</body>
+</html>
