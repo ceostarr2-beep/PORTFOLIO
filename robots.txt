@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ceostarr2-beep.github.io/PORTFOLIO/sitemap.xml
